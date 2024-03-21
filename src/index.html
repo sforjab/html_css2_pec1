@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>UOC Boilerplate</title>
+  </head>
+  <body>
+    <!-- Cabecera -->
+    <header>
+      <div class="container">
+          <div>
+          <a href="index.html">
+              <h1 class="banner" lang="en">
+                <span>Colmar</span> The Petite Venise
+              </h1>
+          </a>
+          </div>
+          <!-- Menú -->
+          <nav>
+              <ul>
+                <li><a class="menuActivo" href="">Presentación</a></li>
+                <li><a href="">Lugares de interés</a></li>
+                <li><a href="">Enlaces</a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+    <div class="container">
+      <!-- <picture>
+        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
+        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
+      </picture> -->
+      <figure>
+        <picture>
+          <source srcset="./assets/images/canales-colmar.jpg?as=webp&width=600" type="image/webp" />
+          <img src="./assets/images/canales-colmar.jpg" alt="Canales de Colmar" class="uoc-logo" />
+        </picture>
+        <figcaption>Canales de Colmar - <a href="https://www.flickr.com/photos/joanbrebo/41479431225/">Foto de Joanbrebo</a></figcaption>
+      </figure>
+
+    
+      <p>
+        Colmar (en francés: Colmar; en alsaciano: Colmer; en alemán: Colmar, entre 1871-1918, Kolmar, entre 1940-45) es una ciudad y comuna, ubicada en la Colectividad 
+        Europea de Alsacia, es la capital del departamento del Alto Rin, en la región de Alsacia, Francia.
+      </p>
+
+      <h3>Historia</h3>
+      <p>Colmar, cuya historia se remonta al siglo IX, era una ciudad imperial libre que formaba parte de la Decápolis Alsaciana. Experimentó un rápido crecimiento al final de la 
+        Edad Media y durante el Renacimiento. Durante la Guerra de los Treinta Años, fue ocupada por las tropas suecas en 1632 y por las francesas en octubre de 1634. Sin embargo, 
+        tras la firma de la Paz de Westfalia, recuperó su estatus de ciudad imperial. Durante la Guerra Franco-Neerlandesa, Colmar cambió de bando varias veces, siendo francesa en 
+        1673 e Imperial al año siguiente. En enero de 1675, fue conquistada por Enrique de la Tour d'Auvergne-Bouillon, después de su victoria en la batalla de Turckheim. El tratado 
+        de Nimega finalmente legalizó la anexión francesa.
+
+        En 1871, Colmar se integró al Imperio Alemán, pero después del armisticio de 1918, fue devuelta a Francia. Durante la Segunda Guerra Mundial, la ciudad fue nuevamente anexada 
+        por la Alemania Nazi. Sin embargo, el 2 de febrero de 1945, al concluir la batalla de la bolsa de Colmar, volvió a quedar bajo la jurisdicción francesa.
+      </p>
+
+      <h3>Demografía</h3>
+      <p>En el año 2015, el censo poblacional reveló que Colmar albergaba a 67956 habitantes, situándola como la segunda comuna más poblada del departamento del Alto Rin y la 
+        tercera en Alsacia, después de Estrasburgo y Mulhouse, en términos de número de habitantes.
+      </p>
+
+      <div id="canvasPoblacion"><canvas id="myChart"></canvas></div>
+
+      <h3>Cultura</h3>
+      <p>Colmar, una ciudad antigua bien preservada, alberga una rica herencia arquitectónica que incluye edificios góticos alemanes y renacentistas tempranos, así como antiguas iglesias, 
+        como la Colegiata de San Martín del siglo XIII. Conocida como la "Capital de los vinos de Alsacia", su ubicación en el corazón de los viñedos alsacianos le otorga este título. 
+        Además, es el hogar del Museo Unterlinden, que alberga el famoso Retablo de Issenheim. Colmar también es famosa por sus festivales anuales, como la Feria de los vinos en agosto 
+        y los mercados de Navidad en diciembre, que atraen a visitantes de todo el país.
+      </p>
+
+      <figure>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jTqxBxqgMgU?si=3vi3Wgr19dQ4IHAx" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+        picture-in-picture; web-share" allowfullscreen></iframe>
+        <figcaption>
+            Paseo virtual por el mecado navideño de Colmar
+        </figcaption>
+      </figure>
+    </div>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>
