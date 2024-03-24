@@ -1,83 +1,15 @@
-/* * {
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
-}
-
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
-}
-
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
-}
-
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
-}
- */
-
-
- /* Definimos variables para los colores de textos y fondos */
-:root {
-  --col-gray: rgb(93, 95, 121);
-  --col-white: rgb(255, 255, 255);
-  --col-orange: rgb(245, 157, 35);
-  --col-black: rgb(0,0,0); 
-}
-
 /* Diseño Mobile first */
 /* Elementos comunes */
 html {
   box-sizing: border-box;
-  color: var(--col-txt-menu);
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
+  font-family: $font-family-sans-serif;
   font-weight: 400;
   height: 100%;
-}
 
-*, *:before, *:after {
-  box-sizing: inherit;
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 }
 
 body {
@@ -88,41 +20,41 @@ body {
 }
 
 h1 {
-  color: var(--col-gray);
+  color: $col-gray;
   font-size: 0.8rem;
-}
 
-h1::before {
-  background-image: url(../images/blason-colmar.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: bottom;
-  display: inline-block;
-  width: 3rem; 
-  height: 3rem;
-  margin-right: 15px;
-  content:"";
-}
+  &::before {
+    background-image: url(../images/blason-colmar.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    display: inline-block;
+    width: 3rem; 
+    height: 3rem;
+    margin-right: 15px;
+    content: "";
+  }
 
-h1 span {
-  color: var(--col-orange);
-  font-size: 2rem;
+  span {
+    color: $col-orange;
+    font-size: 2rem;
+  }
 }
 
 h3 {
-  color: var(---col-black);
+  color: $col-black;
   font-weight: 800;
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
 a {
-  color: var(--col-orange);
+  color: $col-orange;
   text-decoration: none;
-}
 
-a:hover {
-  color: var(--col-gray);
+  &:hover {
+    color: $col-gray;
+  }
 }
 
 ul {
@@ -134,21 +66,22 @@ ul {
 /* Contenedores */
 header {
   padding-bottom: 1rem;
-}
 
-/* main {
-  flex: 1;
-} */
+  .container {
+    text-align: center;
+  }
+}
 
 footer {
-  background-color: var(--col-gray);
-  color: var(--col-white);
+  background-color: $footer-bg;
+  color: $col-black;
   margin-top: 4rem;
   padding: 2rem 0;
-}
+  font-weight: bold;
 
-footer img {
-  width: 220px;
+  img {
+    width: 220px;
+  }
 }
 
 .container {
@@ -160,54 +93,55 @@ footer img {
   width: 100%;
 }
 
-/* Contenido header */
-header .container {
-  text-align: center;
-}
-
 /* Menú de navegación */
-nav a {
-  color: var(--col-gray);
-}
+nav {
+  a {
+    color: $col-gray;
 
-nav a:hover, nav a.menuActivo {
-  color: var(--col-orange);
-}
+    &:hover, &.menuActivo {
+      color: $col-orange;
+    }
+  }
 
-nav ul {
-  font-weight: 700;
-}
-
-/* Contenido footer */
-footer .container {
-  text-align: center;
+  ul {
+    font-weight: 700;
+  }
 }
 
 /* Contenido footer */
-footer p {
-  font-size: 0.8rem;
+footer {
+  .container {
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
 }
 
+/* Estilos para centrar texto */
 .textoCentrado {
   text-align: center;
 }
 
 /* Artículo */
-article p {
-  line-height: 1.2rem;
+article {
+  p {
+    line-height: 1.2rem;
+  }
 }
 
 figure {
   margin-bottom: 2rem;
   text-align: center;
-}
 
-figure img {
-  max-width: 100%;
-}
+  img {
+    max-width: 100%;
+  }
 
-figcaption {
-  font-size: 0.6rem;
+  figcaption {
+    font-size: 0.6rem;
+  }
 }
 
 iframe {
@@ -216,8 +150,7 @@ iframe {
   height: 200px;
 }
 
-/* Presentación */
-
+/* Gráfica de población */
 #canvasPoblacion {
   display: block;
   position: relative;
@@ -225,69 +158,19 @@ iframe {
   width: 75%;
 }
 
-/* Lugares de interés */
-
-#listaLugares {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 20px;
-  text-align: center;
-}
-
-#listaLugares li {
-  margin-top: 2rem;
-}
-
-#listaLugares li a {
-  margin-bottom: 0.8rem;
-  font-weight: bold;
-  font-size: 0.7rem;
-}
-
-#listaLugares li img {
-  margin-top: 1rem;
-  width: 80%;
-}
-
-/* Páginas de detalle */
-
-#enlacesLugares {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-#enlacesLugares li {
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-#enlacesLugares li::after {
-  margin-left: 0.4rem;
-  margin-right: 0.4rem;
-  content: "·";
-  color: var(--col-orange);
-}
-
-#enlacesLugares li:last-child::after {
-  content: "";
-}
-
 /* Diseño para tablets */
 @media (min-width: 480px) {
   /* Contenedor principal */
   .container, .containerEstrecho {
-      max-width: 590px;
+    max-width: 590px;
   }
 
   /* Elementos comunes */
   h1 {
-      color: var(--col-gray);
-      font-size: 1.3rem;
-  }
-  
-  h1::before {
+    color: $col-gray;
+    font-size: 1.3rem;
+
+    &::before {
       background-image: url(../images/blason-colmar.png);
       background-repeat: no-repeat;
       background-size: 100%;
@@ -296,30 +179,26 @@ iframe {
       width: 4rem; 
       height: 4rem;
       margin-right: 15px;
-      content:"";
-  }
-  
-  h1 span {
-      color: var(--col-orange);
-      font-size: 3.5rem;
-  }
+      content: "";
+    }
 
-  h2 {
-      font-size: 2.6rem;
-      margin-bottom: 4rem;
+    span {
+      color: $col-orange;
+      font-size: 3.5rem;
+    }
   }
 
   h3 {
-      font-size: 1.6rem;
-      margin-top: 2rem;
+    font-size: 1.6rem;
+    margin-top: 2rem;
   }
 
   figure {
-      margin-bottom: 3rem;
+    margin-bottom: 3rem;
   }
 
   iframe {
-      height: 315px;
+    height: 315px;
   }
 }
 
@@ -331,22 +210,26 @@ iframe {
   }
 
   /* Contenido header */
-  header .container {
+  header {
+    .container {
       align-items: baseline;
       display: flex;
       justify-content: space-between;
+    }
   }
 
   /* Menú de navegación */
-  nav ul {
+  nav {
+    ul {
       display: flex;
-  }
 
-  nav ul li {
-      margin-left: 1.5rem;
+      li {
+        margin-left: 1.5rem;
+      }
+    }
   }
 
   iframe {
-      width: 70%;
+    width: 70%;
   }
 }
