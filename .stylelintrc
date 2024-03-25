@@ -1,10 +1,11 @@
 {
     "extends": ["stylelint-config-recommended-scss"],
-    "plugins": ["stylelint-selector-bem-pattern"],
     "rules": {
-      "plugin/selector-bem-pattern": {
-        "preset": "bem"
-      }
+       "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+       "block-no-empty": true,
+       "selector-max-specificity": "0,2,2",
+       "declaration-block-no-duplicate-custom-properties": true,
+       "no-duplicate-selectors": true,
+       "comment-no-empty": true
     }
-  }
-  
+   }
