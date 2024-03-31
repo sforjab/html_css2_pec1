@@ -45,6 +45,7 @@
     "rimraf": "^5.0.1",
     "sharp": "^0.31.1",
     "stylelint": "^16.2.1",
+    "stylelint-config-recess-order": "^5.0.0",
     "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-scss": "^6.2.1",
     "stylelint-selector-bem-pattern": "^4.0.0"

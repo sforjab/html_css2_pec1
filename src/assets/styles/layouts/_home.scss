@@ -1,54 +1,52 @@
 /* Diseño Mobile first */
 /* Elementos comunes */
-html {
+.html {
   box-sizing: border-box;
-  /* font-family: 'Inter', sans-serif; */
+  height: 100%;
   font-family: $font-family-sans-serif;
   font-weight: 400;
-  height: 100%;
 
   *, *:before, *:after {
     box-sizing: inherit;
   }
 }
 
-body {
-  margin: 0;
-  height: 100%;
+.html__body {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  margin: 0;
 }
 
-h1 {
-  color: $col-gray;
+.banner {
   font-size: 0.8rem;
+  color: $col-gray;
 
   &::before {
-    background-image: url(../images/blason-colmar.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
     display: inline-block;
-    width: 3rem; 
+    width: 3rem;
     height: 3rem;
     margin-right: 15px;
     content: "";
+    background-image: url(../images/blason-colmar.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
   }
 
-  span {
-    color: $col-orange;
+  .banner__highlight {
     font-size: 2rem;
+    color: $col-orange;
   }
 }
 
-h3 {
-  color: $col-black;
+.html__heading {
   font-weight: 800;
-  font-size: 1.5rem;
   line-height: 2rem;
+  color: $col-black;
 }
 
-a {
+.html__link, .header__link  {
   color: $col-orange;
   text-decoration: none;
 
@@ -57,45 +55,45 @@ a {
   }
 }
 
-ul {
+.html__list, .header__list {
+  padding: 0;
   line-height: 1.5rem;
   list-style-type: none;
-  padding: 0;
 }
 
 /* Contenedores */
-header {
+.header {
   padding-bottom: 1rem;
 
-  .container {
+  .header__container {
     text-align: center;
   }
 }
 
-footer {
-  background-color: $footer-bg;
-  color: $col-black;
-  margin-top: 4rem;
+.footer {
   padding: 2rem 0;
+  margin-top: 4rem;
   font-weight: bold;
+  color: $col-black;
+  background-color: $footer-bg;
 
-  img {
+  .footer__logo {
     width: 220px;
   }
 }
 
-.container {
-  margin-right: auto;
-  margin-left: auto;
+.html__container {
+  width: 100%;
   max-width: 480px;
   padding-right: 15px;
   padding-left: 15px;
-  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Menú de navegación */
-nav {
-  a {
+.header__nav {
+  .header__link {
     color: $col-gray;
 
     &:hover, &.menuActivo {
@@ -103,101 +101,94 @@ nav {
     }
   }
 
-  ul {
+  .header__list {
     font-weight: 700;
   }
 }
 
 /* Contenido footer */
-footer {
-  .container {
+.footer {
+  .footer__container {
     text-align: center;
   }
 
-  p {
+  .footer__text {
     font-size: 0.8rem;
   }
 }
 
 /* Estilos para centrar texto */
-.textoCentrado {
+.footer {
   text-align: center;
 }
 
-/* Artículo */
-article {
-  p {
-    line-height: 1.2rem;
-  }
-}
-
-figure {
+.html__figure {
   margin-bottom: 2rem;
   text-align: center;
 
-  img {
+  .figure__img {
     max-width: 100%;
   }
 
-  figcaption {
+  .figure__caption {
     font-size: 0.6rem;
   }
 }
 
-iframe {
-  border: 0;
+.html__iframe {
   width: 100%;
   height: 200px;
+  border: 0;
 }
 
 /* Gráfica de población */
 #canvasPoblacion {
-  display: block;
   position: relative;
-  margin: 0 auto;
+  display: block;
   width: 75%;
+  margin: 0 auto;
 }
 
 /* Diseño para tablets */
 @media (min-width: 480px) {
   /* Contenedor principal */
-  .container, .containerEstrecho {
+  .html__container {
     max-width: 590px;
   }
 
   /* Elementos comunes */
-  h1 {
-    color: $col-gray;
+  .banner {
     font-size: 1.3rem;
+    color: $col-gray;
 
     &::before {
-      background-image: url(../images/blason-colmar.png);
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: bottom;
       display: inline-block;
       width: 4rem; 
       height: 4rem;
       margin-right: 15px;
       content: "";
+      background-image: url(../images/blason-colmar.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 100%;
     }
 
-    span {
-      color: $col-orange;
+    .banner__highlight {
       font-size: 3.5rem;
+      color: $col-orange;
     }
   }
 
-  h3 {
-    font-size: 1.6rem;
+  .html__heading {
     margin-top: 2rem;
+    font-size: 1.6rem;
   }
 
-  figure {
+  .html__figure {
     margin-bottom: 3rem;
   }
 
-  iframe {
+  .html__iframe {
     height: 315px;
   }
 }
@@ -205,31 +196,31 @@ iframe {
 /* Diseño para escritorio */
 @media (min-width: 768px) {
   /* Contenedor principal */
-  .container {
+  .html__container {
     max-width: 1140px;
   }
 
   /* Contenido header */
-  header {
-    .container {
-      align-items: baseline;
+  .header {
+    .header__container {
       display: flex;
+      align-items: baseline;
       justify-content: space-between;
     }
   }
 
   /* Menú de navegación */
-  nav {
-    ul {
+  .header__nav {
+    .header__list {
       display: flex;
 
-      li {
+      .header__item {
         margin-left: 1.5rem;
       }
     }
   }
 
-  iframe {
+  .html__iframe {
     width: 70%;
   }
 }
