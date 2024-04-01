@@ -46,7 +46,7 @@
   color: $col-black;
 }
 
-.html__link, .header__link  {
+.html__link {
   color: $col-orange;
   text-decoration: none;
 
@@ -70,15 +70,25 @@
   }
 }
 
+/* Pie de página */
 .footer {
   padding: 2rem 0;
   margin-top: 4rem;
   font-weight: bold;
   color: $col-black;
+  text-align: center;
   background-color: $footer-bg;
 
   .footer__logo {
     width: 220px;
+  }
+
+  .footer__container {
+    text-align: center;
+  }
+
+  .footer__text {
+    font-size: 0.8rem;
   }
 }
 
@@ -92,34 +102,17 @@
 }
 
 /* Menú de navegación */
-.header__nav {
-  .header__link {
-    color: $col-gray;
+.header__link {
+  color: $col-gray;
+  text-decoration: none;
 
-    &:hover, &.menuActivo {
-      color: $col-orange;
-    }
-  }
-
-  .header__list {
-    font-weight: 700;
+  &:hover, &.header__activo {
+    color: $col-orange;
   }
 }
 
-/* Contenido footer */
-.footer {
-  .footer__container {
-    text-align: center;
-  }
-
-  .footer__text {
-    font-size: 0.8rem;
-  }
-}
-
-/* Estilos para centrar texto */
-.footer {
-  text-align: center;
+.header__list {
+  font-weight: 700;
 }
 
 .html__figure {
@@ -142,7 +135,7 @@
 }
 
 /* Gráfica de población */
-#canvasPoblacion {
+.html__canvas {
   position: relative;
   display: block;
   width: 75%;
@@ -210,16 +203,14 @@
   }
 
   /* Menú de navegación */
-  .header__nav {
-    .header__list {
-      display: flex;
+  .header__list {
+    display: flex;
 
-      .header__item {
-        margin-left: 1.5rem;
-      }
+    .header__item {
+      margin-left: 1.5rem;
     }
   }
-
+  
   .html__iframe {
     width: 70%;
   }

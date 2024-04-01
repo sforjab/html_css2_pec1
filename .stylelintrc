@@ -9,7 +9,7 @@
        "selector-max-specificity": "0,2,2",
        "declaration-block-no-duplicate-custom-properties": true,
        "no-duplicate-selectors": true,
-       "whitespace-inside": "always",
+       "comment-whitespace-inside": "always",
        "comment-no-empty": true
     }
-   }
+}
